@@ -1,0 +1,3 @@
+title: philipp Scholz
+baseurl: ""   # leave "" if the repo is <username>.github.io
+exclude: [README.md]
