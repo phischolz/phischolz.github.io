@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Research
-nav_order: 2
+nav_order: 1
 ---
-I work on ...
-
-![Lab setup]({{ '/images/lab.jpg' | relative_url }})
+Hi, I'm Philipp, this is a test page.
