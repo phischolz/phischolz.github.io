@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} · {{ site.title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css">
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul><li><strong>{{ site.title }}</strong></li></ul>
+      <ul>
+        {% assign items = site.pages | where_exp: "p", "p.nav_order" | sort: "nav_order" %}
+        {% for p in items %}
+          <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <main class="container">{{ content }}</main>
+</body>
+</html>
